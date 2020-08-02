@@ -34,6 +34,15 @@ class HomeNavBar extends React.Component {
 	};
 
 	render() {
+		const _links = [
+			{ path: '/users', label: 'Users' },
+			{ path: '/username/places', label: 'Places' },
+			{ path: '/places/new', label: 'Add New Place' },
+			{ path: '/places/:placeid', label: 'Update Place' },
+			{ path: '/signup', label: 'Sign Up' },
+			{ path: '/login', label: 'Log in' }
+		];
+
 		return (
 			<div>
 				<Navbar className='bg-danger' expand='lg'>
@@ -80,12 +89,13 @@ class HomeNavBar extends React.Component {
 							</div>
 
 							<Nav navbar>
-								<NavItem>
-									<NavLink to='/'>Back to Kit</NavLink>
-								</NavItem>
-								<NavItem>
-									<NavLink to='/'>Have an issue?</NavLink>
-								</NavItem>
+								{_links.map(({ path, label }, index) => {
+									return (
+										<NavItem key={index}>
+											<NavLink to={path}>{label}</NavLink>
+										</NavItem>
+									);
+								})}
 							</Nav>
 						</Collapse>
 					</Container>

@@ -7,5 +7,11 @@ body {
 		'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-size: large;
+	font-size: medium;
+}
+
+.active {
+	border: 2px solid white;
+	border-radius: 0.25rem;
+	padding: 7px 15px;
 }
