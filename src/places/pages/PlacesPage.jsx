@@ -1,6 +1,5 @@
 import React from 'react';
-import HomeNavBar from 'components/HomeNavBar';
-import PlacesList from 'places/components/PlacesList';
+import PlacesList from '../components/PlacesList';
 
 const PlacesPage = () => {
 	const PLACES = [
@@ -11,7 +10,6 @@ const PlacesPage = () => {
 
 	return (
 		<>
-			<HomeNavBar />
 			<PlacesList places={PLACES} />
 		</>
 	);

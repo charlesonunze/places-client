@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
-import "assets/css/nucleo-icons.css";
-import "assets/scss/blk-design-system-react.scss?v=1.1.0";
+import { Windmill } from '@windmill/react-ui'
+
+import './assets/css/tailwind.output.css'
 import './index.css';
 
 import App from './App';
@@ -11,7 +12,9 @@ import App from './App';
 ReactDOM.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <Windmill>
+        <App />
+      </Windmill>
     </React.StrictMode>
   </BrowserRouter>,
   document.getElementById('root')
